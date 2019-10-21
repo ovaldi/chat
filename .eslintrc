@@ -1,0 +1,40 @@
+{
+    "env": {
+        "browser": true
+    },
+    "extends": "standard",
+    "parser": "babel-eslint",
+    "plugins": [
+        "standard",
+        "react"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+          "jsx": true
+        }
+    },
+    "rules": {
+        "camelcase": "off",
+        "no-empty": ["error"],
+        "no-return-assign": "off",
+        "indent": [1, 2, { "SwitchCase": 1 }],
+        "semi": ["error", "always"],
+        "object-curly-spacing": ["error", "always"],
+        "react/jsx-curly-spacing": ["error", "always"],
+        "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+        "yield-star-spacing": ["error", {"before": false, "after": true}],
+        "generator-star-spacing": ["error", {"before": false, "after": true}],
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error"
+    },
+    "globals": {
+        "$": true,
+        "it": true,
+        "wx": true,
+        "_hmt": true,
+        "_zaq": true,
+        "iread": true,
+        "Raven": true,
+        "describe": true
+    }
+}

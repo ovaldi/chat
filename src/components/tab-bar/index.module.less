@@ -1,0 +1,28 @@
+.tabbar {
+  height: 100px;
+
+  @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    height: 130px;
+  }
+  
+  .inner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .tabs {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    border-top: 1PX solid #ddd;
+    box-sizing: border-box;
+    background-color: #fff;
+
+    @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+      height: 130px;
+    }
+  }
+}

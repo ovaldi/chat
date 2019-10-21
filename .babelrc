@@ -1,0 +1,29 @@
+{
+    "compact" : true,
+    "presets": [
+      ["env", {
+        "modules": false,
+        "useBuiltIns": false,
+        "targets": {
+          "browsers": [
+            'last 2 versions',
+            '> 1%',
+            'ie >= 9',
+            'safari >= 9'
+          ]
+        }
+      }],
+      "react"
+    ],
+    "plugins": [
+      "lodash",
+      "transform-runtime",
+      "transform-async-to-generator",
+      "syntax-dynamic-import",
+      "transform-decorators-legacy",
+      "transform-class-properties",
+      "transform-object-rest-spread",
+      ["import", { libraryName: "antd-mobile", style: true }],
+      "react-hot-loader/babel",
+    ]
+}

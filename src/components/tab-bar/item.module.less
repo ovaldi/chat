@@ -1,0 +1,20 @@
+@import '~less/theme.module.less';
+
+.tab {
+  display: flex;
+  flex: 1;
+  color: #888;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &.active {
+    color: @color-primary;
+  }
+
+  .title {
+    font-size: 20px;
+    margin: 6px 0 0;
+  }
+}

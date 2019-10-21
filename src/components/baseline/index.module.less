@@ -1,0 +1,34 @@
+@import '~less/theme.module.less';
+
+.baseline {
+  font-size: 28px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.inner {
+  position: relative;
+  display: inline-block;
+  position: relative;
+  color: @color-secondary;
+
+  &:before {
+    content: '';
+    display: block;
+    border-top: 1PX solid #E5E5E5;
+    position: absolute;
+    top: 50%;
+    width: 120px;
+    right: 105%;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    border-top: 1PX solid #E5E5E5;
+    position: absolute;
+    top: 50%;
+    width: 120px;
+    left: 105%;
+  }
+}
