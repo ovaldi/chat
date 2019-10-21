@@ -32,7 +32,7 @@ class Profile extends React.PureComponent {
             </div>
             
             <div className={ theme.welth }>
-              Q币余额:<span className={ theme.number }>10086</span>
+              Coins:<span className={ theme.number }>10086</span>
             </div>
           </Flex.Item>
           <div className={ theme.avatar } style={ background }></div>

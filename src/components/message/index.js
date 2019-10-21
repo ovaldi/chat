@@ -14,7 +14,7 @@ const hash = {
   notice: Notice
 };
 
-const Message = ({ friend, message, theme }) => {
+const Message = React.memo(({ friend, message, theme }) => {
   const comp = hash[message.type] || Unsupport;
   const inst = React.createElement(comp, {
     friend,
@@ -27,7 +27,7 @@ const Message = ({ friend, message, theme }) => {
       { inst }
     </div>
   );
-};
+});
 
 Message.propTypes = {
   friend: PropTypes.PropTypes.shape({

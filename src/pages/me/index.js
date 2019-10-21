@@ -36,14 +36,14 @@ class Page extends React.PureComponent {
 
     if (_.isEmpty(profile)) {
       return (
-        <Layout title='我的'>
+        <Layout title='Me'>
           <Loading/>
         </Layout>
       );
     }
 
     return (
-      <Layout title='我的'>
+      <Layout title='Me'>
         <Profile
           profile={ profile }
         />
@@ -56,23 +56,23 @@ class Page extends React.PureComponent {
             onClick={ () => dispatch(push('/coupons')) }
             thumb={ <Icon type='coupon' className={ theme.iconfont }/> }
             extra={
-              <span className={ theme.coupon }>100元可用</span>
+              <span className={ theme.coupon }>$100 available</span>
             }
-          >我的优惠券</List.Item>
+          >Coupons</List.Item>
           <List.Item
             onClick={ () => dispatch(push('/expenses')) }
             arrow='horizontal'
             thumb={
               <Icon type='expenses' className={ theme.iconfont }/>
             }
-          >消费记录</List.Item>
+          >Expenses</List.Item>
           <List.Item
-            onClick={ () => dispatch(push('/readlogs')) }
+            onClick={ () => dispatch(push('/cards')) }
             arrow='horizontal'
             thumb={
               <Icon type='bookmark' className={ theme.iconfont }/>
             }
-          >阅读历史</List.Item>
+          >Cards</List.Item>
         </List>
 
         <TabBar active='me'/>
