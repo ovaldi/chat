@@ -19,7 +19,9 @@ class Wrapper extends React.PureComponent {
   }
 
   handleLeftClick = () => {
-    this.props.dispatch(history.length === 1 ? push('/m') : goBack());
+    if (this.props.backable) {
+      this.props.dispatch(history.length === 1 ? push('/m') : goBack());
+    }
   }
 
   render () {
