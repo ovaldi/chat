@@ -1,5 +1,4 @@
 const path = require('path');
-const mock = require('./mock');
 const webpack = require('webpack');
 const pxtorem = require('postcss-pxtorem');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -52,8 +51,7 @@ module.exports = {
   devServer: {
     contentBase: './dist',
     disableHostCheck: true,
-    historyApiFallback: true,
-    before: mock
+    historyApiFallback: true
   },
   resolve: {
     mainFiles: ['index.web', 'index'],

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Router } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { change as locationChange } from '@/actions/router';
 
 class ConnectedRouter extends React.Component {
@@ -27,7 +27,7 @@ class ConnectedRouter extends React.Component {
 
   render () {
     return (
-      <Router { ...this.props } />
+      <HashRouter { ...this.props } />
     );
   }
 }

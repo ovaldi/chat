@@ -1,3 +1,4 @@
+import me from '@/api/me';
 import auth from '@/utils/auth';
 import request from '@/utils/request';
 import { put, call, takeLatest } from 'redux-saga/effects';
@@ -5,7 +6,7 @@ import { put, call, takeLatest } from 'redux-saga/effects';
 export function* init () {
   try {
     if (auth.isAuthenticated()) {
-      const payload = yield call(() => request.get('/v1/me/profile'));
+      const payload = yield call(me.profile);
       yield put({
         type: 'profile/update',
         payload

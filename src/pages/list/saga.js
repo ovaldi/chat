@@ -1,9 +1,9 @@
-import request from '@/utils/request';
+import api from '@/api/friend';
 import { call, put, takeLatest } from 'redux-saga/effects';
 
 export function* init () {
   try {
-    const friends = yield call(() => request.get('/v1/friends'));
+    const friends = yield call(api.list);
     yield put({
       type: 'friend/byid/update',
       payload: {

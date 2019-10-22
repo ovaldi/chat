@@ -18,7 +18,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    publicPath: 'https://qcdn.zhangzhongyun.com/spa/',
+    publicPath: '/',
     filename: '[name].[chunkhash:8].js',
     chunkFilename: '[name].[chunkhash:8].bundle.js'
   },

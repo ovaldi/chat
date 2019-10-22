@@ -1,4 +1,5 @@
-import request from '@/utils/request';
+import friend from '@/api/friend';
+import message from '@/api/message';
 import { all, call, put, takeLatest } from 'redux-saga/effects';
 
 export function* init (action) {
@@ -8,18 +9,16 @@ export function* init (action) {
 
     yield all([
       call(function* () {
-        const friend = yield call(() => request.get(`/v1/friends/${id}`));
+        const data = yield call(friend.get, id);
         yield put({
           type: 'friend/byid/append',
           payload: {
-            friend
+            friend: data
           }
         });
       }),
       call(function* () {
-        const messages = yield call(() => request.get('/v1/messages', {
-          params: { id, limit } }
-        ));
+        const messages = yield call(message.list, { limit });
         yield put({
           type: 'pages/chat/message/update',
           payload: {
