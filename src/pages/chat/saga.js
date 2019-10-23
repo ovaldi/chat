@@ -18,7 +18,7 @@ export function* init (action) {
         });
       }),
       call(function* () {
-        const messages = yield call(message.list, { limit });
+        const messages = yield call(message.list, { id, limit });
         yield put({
           type: 'pages/chat/message/update',
           payload: {
