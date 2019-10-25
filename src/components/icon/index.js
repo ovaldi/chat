@@ -3,23 +3,25 @@ import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import styles from './index.module.less';
 
-@themr('components/icon', styles)
 class Icon extends PureComponent {
   render () {
     const { type, className, theme } = this.props;
 
     return (
-      <svg className={ classnames(theme.iconfont, className) } aria-hidden='true' onClick={ this.onClick }>
+      <svg
+        onClick={ this.handleClick }
+        className={ classnames(theme.iconfont, className) }
+      >
         <use xlinkHref={ `#icon${type}` }></use>
       </svg>
     );
   }
 
-  onClick = () => {
+  handleClick = () => {
     if (this.props.onClick) {
       this.props.onClick();
     }
   }
 }
 
-export default Icon;
+export default themr('components/icon', styles);
